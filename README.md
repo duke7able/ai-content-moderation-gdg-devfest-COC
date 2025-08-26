@@ -47,12 +47,21 @@ NEXTAUTH_SECRET=your-super-secret-key # generate with: openssl rand -base64 32
 # === Google OAuth (for NextAuth) ===
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
 
 # === Database ===
 DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DB_NAME
 
 # === Gemini API Key ===
 GEMINI_API_KEY=your-gemini-api-key
+
+# === Prompt what all llm needs to check with the input ===
+NEXT_PUBLIC_MODERATION_PROMPT=your-prompt
+
+# === Authorization secret for signing your JWTs ===
+AUTH_JWT_SECRET=Auth-secret-for-login
+
+
 ```
 
 👉 **Important:**  
@@ -132,3 +141,4 @@ Pull requests are welcome — whether it’s refining **prompt tuning**, improvi
 - This tool is **only** for GDG DevFest moderation.  
 - Please **don’t misuse the API** or bypass the checks.  
 - Prompt customization lives at → `utils/moderationPrompt.js`.  
+- This project was initially created by Team [Asambhav Solutions](https://www.asambhav.in/) for Devefest Gandhinagar.
