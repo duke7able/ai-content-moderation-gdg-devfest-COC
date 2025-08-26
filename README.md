@@ -47,7 +47,7 @@ NEXTAUTH_SECRET=your-super-secret-key # generate with: openssl rand -base64 32
 # === Google OAuth (for NextAuth) ===
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
-GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
+GOOGLE_REDIRECT_URI=your-vercel-domain/api/auth/google/callback
 
 # === Database ===
 DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DB_NAME
